@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string name="app_id">733725814088147</string>
+  <string name="app_name">SocialMediaOAuthPoC</string>
+  <string name="fb_login_protocol_scheme">fb733725814088147</string>
+</resources>
