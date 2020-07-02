@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.OS;
 using Xamarin.Facebook;
 using Android.Content;
+using SocialMediaOAuthPoC.Droid.Services;
 
 namespace SocialMediaOAuthPoC.Droid
 {
@@ -28,7 +29,7 @@ namespace SocialMediaOAuthPoC.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new App());
+            LoadApplication(new App(new FacebookLoginService()));
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)

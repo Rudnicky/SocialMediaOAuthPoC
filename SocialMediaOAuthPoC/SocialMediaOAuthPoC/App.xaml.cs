@@ -8,10 +8,13 @@ namespace SocialMediaOAuthPoC
 {
     public partial class App : Application
     {
+        public IFacebookLoginService FacebookLoginService { get; private set; }
 
-        public App()
+        public App(IFacebookLoginService facebookLoginService)
         {
             InitializeComponent();
+
+            FacebookLoginService = facebookLoginService;
 
             DependencyService.Register<MockDataStore>();
             MainPage = new MainPage();

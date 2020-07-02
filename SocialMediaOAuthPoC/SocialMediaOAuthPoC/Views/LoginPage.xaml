@@ -12,15 +12,16 @@
         <vm:LoginViewModel />
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <Grid>
+        <StackLayout VerticalOptions="Center" 
+                     HorizontalOptions="Center"
+                     Orientation="Vertical">
             <controls:FacebookLoginButton OnSuccess="{Binding OnFacebookLoginSuccessCmd}"
                                           OnError="{Binding OnFacebookLoginErrorCmd}"
                                           OnCancel="{Binding OnFacebookLoginCancelCmd}"
                                           Text="Login"
-                                          VerticalOptions="Center" 
-                                          HorizontalOptions="Center" 
                                           HeightRequest="30" 
                                           Margin="20,0,20,0" />
-        </Grid>
+            <Button Text="FB Logout" HeightRequest="30" Margin="20,0,20,0"  Command="{Binding FacebookLogoutCmd}" />
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
